@@ -1,0 +1,24 @@
+[project]
+name = "mylab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "David M. Palmer", email = "palmer@lanl.gov" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "astropy>=7.2.0",
+    "ipython>=9.9.0",
+    "matplotlib>=3.10.8",
+    "polars>=1.37.1",
+    "python-dateutil>=2.9.0.post0",
+    "scipy>=1.17.0",
+]
+
+[project.scripts]
+mylab-py = "mylab_py:main"
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
