@@ -6,14 +6,22 @@ readme = "README.md"
 authors = [
     { name = "David M. Palmer", email = "palmer@lanl.gov" }
 ]
-requires-python = ">=3.14"
+requires-python = "==3.13.*"
 dependencies = [
     "astropy>=7.2.0",
+    "batanalysis>=1.1.0",
     "ipython>=9.9.0",
     "matplotlib>=3.10.8",
     "polars>=1.37.1",
     "python-dateutil>=2.9.0.post0",
     "scipy>=1.17.0",
+    "swiftbat>=0.1.6",
+    "llvmlite==0.45",
+    "numba==0.62.1",
+    "mission-planner>=0.1.1",
+    "xraysky>=0.2.11",
+    "blackcat-py>=0.1.4",
+    "stored-command-transcriber>=0.1.7",
 ]
 
 [project.scripts]
@@ -22,3 +30,10 @@ mylab-py = "mylab_py:main"
 [build-system]
 requires = ["uv_build>=0.8.14,<0.9.0"]
 build-backend = "uv_build"
+
+[tool.uv.sources]
+blackcat_py = { git = "ssh://git@github.com/BlackCAT-CubeSat/blackcat_py" }
+xraysky = { git = "ssh://git@github.com/BlackCAT-CubeSat/xraysky.git" }
+stored-command-transcriber = { git = "ssh://git@github.com/BlackCAT-CubeSat/stored-command-transcriber.git" }
+mission_planner = { git = "ssh://git@github.com/BlackCAT-CubeSat/mission_planner.git" }
+stored_commands = { git = "ssh://git@github.com/BlackCAT-CubeSat/stored_commands.git" }
