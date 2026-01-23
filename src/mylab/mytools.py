@@ -4,6 +4,8 @@ dmopalmer@gmail.com
 
 """
 
+from datetime import datetime
+import datetime as dt
 from dateutil.parser import parse as parsedate
 
 def parse_as_utc(datein: str | datetime):
