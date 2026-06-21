@@ -16,9 +16,9 @@ dependencies = [
     "python-dateutil>=2.9.0.post0",
     "scipy>=1.17.0",
     "swiftbat>=0.1.6",
-    "llvmlite==0.45",
+    # "llvmlite==0.45",
     "numba==0.62.1",
-    "mission-planner>=0.1.1",
+    # "mission-planner>=0.1.1",
     "xraysky>=0.2.11",
     "blackcat-py>=0.1.4",
     "stored-command-transcriber>=0.1.7",
@@ -35,5 +35,13 @@ build-backend = "uv_build"
 blackcat_py = { git = "ssh://git@github.com/BlackCAT-CubeSat/blackcat_py" }
 xraysky = { git = "ssh://git@github.com/BlackCAT-CubeSat/xraysky.git" }
 stored-command-transcriber = { git = "ssh://git@github.com/BlackCAT-CubeSat/stored-command-transcriber.git" }
-mission_planner = { git = "ssh://git@github.com/BlackCAT-CubeSat/mission_planner.git" }
+# mission_planner = { git = "ssh://git@github.com/BlackCAT-CubeSat/mission_planner.git" }
 stored_commands = { git = "ssh://git@github.com/BlackCAT-CubeSat/stored_commands.git" }
+
+[tool.uv]
+override-dependencies = [
+    # "stored-command-transcriber @ git+ssh://git@github.com/BlackCAT-CubeSat/stored-command-transcriber.git",
+    # "xraysky @ /Users/palmer/repo/xraysky",
+    # "blackcat-py @ /Users/palmer/repo/blackcat/blackcat_py",
+    "cryptography; sys_platform=='never'"
+]
